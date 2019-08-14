@@ -1,0 +1,201 @@
+/*Main Container*/
+.theme1_cc_container {
+	width:100%;
+}
+.theme1_cc_container ul{
+	list-style-type: none;
+	margin: 0px;
+	padding:0px;
+}
+.theme1_cc_container li{
+	display: inline; 
+	margin: 0px;
+	padding:0px;
+}
+
+.content_cool_theme1{
+	border: 1px solid #c2c2c2; 
+	padding: 2px 2px 2px 2px; 
+	position: relative;
+	overflow: hidden;
+}
+.theme1_div_content {
+	display: none;
+    height: 100%;
+    width: 100%;
+	position: relative;
+	left: 0px;
+	overflow: hidden;
+}
+.ContainerSelected .theme1_div_content{
+	display: block;
+}
+.theme1_cc_handleSelected_theme1_cc_handleOver .theme1_div_description {
+	display: block;
+}
+.theme1_div_description{
+	display: none;
+    height: 50%;
+    position: relative;
+    right: 516%;
+    width: 560%;
+}
+.theme1_div_bg_description_content {
+	height: 100%;
+    width: 94%;
+	position: absolute;
+	top: -150%;
+	right: 6%;
+}
+.theme1_div_description_content {
+	height: 90%;
+    width: 94%;
+	position: absolute;
+	top: -150%;
+	right: 6%;
+	overflow: hidden;
+}
+.tooltip_theme1{
+	width: 100%;
+	height: 100%;
+}
+
+.theme1_content_title{
+	font-size: 18px;
+    margin-top: 30px;
+    padding-left: 25px;
+	padding-right: 12%;
+    text-align: left;
+}
+.theme1_content{
+	padding-left: 25px;
+    padding-right: 12%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+    text-align: justify;
+	font-size: 12px;
+}
+.theme1_div_title{
+	-webkit-transform: translateX(-100%) rotate(-90deg); 
+	-webkit-transform-origin: right top; 
+	-moz-transform: translateX(-100%) rotate(-90deg); 
+	-moz-transform-origin: right top;
+	-o-transform: translateX(-100%) rotate(-90deg); 
+	-o-transform-origin: right top; 
+	-ms-transform: translateX(-100%) rotate(-90deg); 
+	-ms-transform-origin: right top; 
+	transform: translateX(-100%) rotate(-90deg); 
+	transform-origin: right top; 
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); 
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: left;
+	height: 70px;
+	overflow: hidden;
+}
+
+.theme1_description_title{
+	float: left;
+	padding-left: 22px;
+	font-family:Raleway, sans-serif !important;
+}
+.theme1_div_description_content a:link, a:visited{
+	color: #4fa3e4 ;
+	padding-left: 10px;
+}
+.theme1_content a:link, a:visited{
+	color: #4fa3e4 ;
+}
+
+.theme1_content  a:hover{
+	color: #ff003c;
+}
+
+.theme1_img_background_with_link:hover{
+	cursor: pointer;
+}
+.theme1_img_background_with_link{
+	display: none;
+}
+.ContainerSelected .theme1_img_background_with_link{
+	display: block;
+}
+.ContainerSelected .theme1_img_background{
+	display: block;
+}
+.theme1_img_background{
+	display: none;
+}
+
+.theme1_img_title{
+	-webkit-transform: rotate(90deg); 
+	-moz-transform: rotate(90deg); 
+	-o-transform: rotate(90deg); 
+	-ms-transform: rotate(90deg); 
+	transform: rotate(90deg); 
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    border: 1px solid white;
+    float: left;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.contentContainer {
+    float: left;
+    overflow: hidden;
+    padding-left: 0;
+    width: 0;
+}
+
+.theme1_ccl_container li{
+	display: inline; 
+	margin: 0px;
+	padding:0px;
+}
+
+.theme1_ccl_container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.theme1_ccl_container {
+    width: 100%;
+}
+
+.theme1_cc_handle {
+    /*background: url(../images/theme1-tab-vertical.png) repeat scroll 0 0 transparent;*/
+	background: url("../images/theme1-tab-vertical-2.png") no-repeat scroll 5px 0px #000 ;
+    border: 0px solid white;
+    float: left;
+    text-align: center;
+    width: 70px;
+}
+
+.theme1_cc_handleOver{
+	cursor: pointer; 
+}
+
+.theme1_cc_handleSelected {
+    background: url(../images/theme1-tab-selected-vertical.png) repeat scroll 0 0 transparent;
+    border: 0px solid white;
+}
+
+.theme1_tbl_title{
+	height:70px;
+	width:100%;
+	border: 0px !important;
+	border-collapse: separate;
+}
+.theme1_tr_title, .theme1_td_title{
+	border: 0px;
+	vertical-align:middle !important;
+}
+.theme1_price{
+	font-size: 30px;
+	color: #ff003c;
+	font-family: Georgia;
+	padding-left: 25px;
+	/*padding-top: 12px;*/
+	text-align: left;
+}

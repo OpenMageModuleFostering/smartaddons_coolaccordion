@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<config>
+	<global>
+		<models>
+            <coolaccordion>
+                <class>Smartaddons_Coolaccordion_Model</class>
+            </coolaccordion>
+        </models>
+		<blocks>
+            <coolaccordion>
+                <class>Smartaddons_Coolaccordion_Block</class>
+            </coolaccordion>  
+			<adminhtml>            
+				<rewrite><!--override regexception thanh add range time trong configuration-->
+					<system_config_form_field_regexception>Smartaddons_Coolaccordion_Block_Adminhtml_Coolaccordion_System_Config_Form_Field_Additem</system_config_form_field_regexception>
+				</rewrite>	
+			</adminhtml>			
+        </blocks>				
+		<helpers>
+            <coolaccordion>
+                <class>Smartaddons_Coolaccordion_Helper</class>
+            </coolaccordion>
+        </helpers>
+        <resources>
+        	<coolaccordion_setup>
+        		<setup>
+        			<module>Smartaddons_Coolaccordion</module>
+        		</setup>
+        	</coolaccordion_setup>
+        </resources>
+	</global>
+	<frontend>
+        <routers>
+			<coolaccordion>
+                <use>standard</use>
+                <args>
+                    <module>Smartaddons_Coolaccordion</module>
+                    <frontName>coolaccordion</frontName>
+                </args>
+            </coolaccordion>
+        </routers>
+		<layout>
+            <updates>
+                <coolaccordion module="Smartaddons_Coolaccordion">
+					<file>smartaddons/coolaccordion.xml</file>
+                </coolaccordion>
+            </updates>
+        </layout>
+        <translate>
+      		<modules>
+          		<Smartaddons_Coolaccordion>
+                     <files>
+                          <default>Smartaddons_Coolaccordion.csv</default>
+                     </files>
+                </Smartaddons_Coolaccordion>
+            </modules>
+        </translate>
+	</frontend>
+	<adminhtml>
+        <translate>
+      		<modules>
+          		<Smartaddons_Coolaccordion>
+                     <files>
+                          <default>Smartaddons_Coolaccordion.csv</default>
+                     </files>
+                </Smartaddons_Coolaccordion>
+            </modules>
+        </translate>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>										
+										<coolaccordion_cfg translate="title" module="coolaccordion">
+											<title>SM Coolaccordion Settings</title>
+										</coolaccordion_cfg>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	<default>
+        <coolaccordion_cfg>
+        	<general>
+                <isenabled>1</isenabled>
+                <title>SM Coolaccordion</title>
+            </general>
+			<module_setting>
+				<module_width>765</module_width>
+				<module_height>350</module_height>
+				<theme>theme1</theme>
+				<!--<scrollbar_direction>vert</scrollbar_direction>
+				<grid_columns>5</grid_columns>
+				<grid_rows>2</grid_rows>-->
+			</module_setting>			
+            <product_selection>
+            	<product_source>catalog</product_source>
+            	<product_category></product_category>
+            	<product_ids></product_ids>
+            	<product_order_by></product_order_by>
+            	<product_order_dir></product_order_dir>
+            	<product_limitation>4</product_limitation>
+            </product_selection>
+				
+			<product_display_setting>
+				<product_image_disp>1</product_image_disp>
+				<product_image_linkable>1</product_image_linkable>
+				<product_image_width>500</product_image_width>
+				<product_image_height>350</product_image_height>
+				<product_image_background>#FFF</product_image_background>
+				<item_image_disp>1</item_image_disp>
+				<item_image_width>45</item_image_width>
+				<item_image_height>50</item_image_height>
+				
+				<product_title_disp>1</product_title_disp>
+				<product_title_linkable>1</product_title_linkable>
+				<product_title_color>#000000</product_title_color>
+				<product_title_max_characters>20</product_title_max_characters>
+				
+				<product_description_disp>1</product_description_disp>
+				<product_description_color>#000000</product_description_color>
+				<product_description_max_characters>150</product_description_max_characters>
+				<product_description_opacity>0.7</product_description_opacity>
+				
+				<product_details_page_link_disp>1</product_details_page_link_disp>
+				<product_details_page_link_text>See details</product_details_page_link_text>
+				
+				<product_links_target>_self</product_links_target>
+				
+				<product_price_disp>1</product_price_disp>
+				<product_price_color>#C76200</product_price_color>
+				<product_reviews_count>1</product_reviews_count>
+				<product_views_count>1</product_views_count>
+				<product_sales_count>1</product_sales_count>
+				<product_stock_status>1</product_stock_status>
+				
+				<tooltip_disp>1</tooltip_disp>
+				<tooltip_width>360</tooltip_width>
+				<tooltip_image_width>120</tooltip_image_width>
+			</product_display_setting>
+            <advanced>
+            	<include_jquery>1</include_jquery>
+            	<pretext></pretext>
+            	<posttext></posttext>
+            </advanced>
+        </coolaccordion_cfg>
+    </default>
+</config>

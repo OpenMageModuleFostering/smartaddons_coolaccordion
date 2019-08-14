@@ -1,0 +1,31 @@
+<?xml version="1.0"?>   
+<layout version="1.0">
+	<default>
+        <reference name="head">
+        	<!-- 
+        	<action method="addCss"><stylesheet>smartaddons/coolaccordion/css/example.css</stylesheet></action>
+        	-->
+        </reference>
+        <!-- all pages
+        <reference name="content">
+        	<block type="coolaccordion/list" name="default.coolaccordion.list">
+			</block>
+        </reference>
+        -->
+    </default>
+	<coolaccordion_index_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+		</reference>
+		<reference name="content">
+			<block type="coolaccordion/list" name="coolaccordion.list.theme">
+<!--				<action method="setConfig">
+					<name>
+						<theme>theme1</theme>						
+					</name>
+				</action> -->
+			</block>
+		</reference>
+	</coolaccordion_index_index>	
+</layout>   
+	

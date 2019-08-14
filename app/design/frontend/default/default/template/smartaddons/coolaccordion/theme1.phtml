@@ -1,0 +1,81 @@
+<?php
+/*------------------------------------------------------------------------
+# SM CoolAccordion - Version 1.0
+# Copyright (C) 2009-2011 YouTech Company. All Rights Reserved.
+# @license - Copyrighted Commercial Software
+# Author: YouTech Company
+# Websites: http://www.smartaddons.com
+-------------------------------------------------------------------------*/
+?>
+<div class="content_cool_theme1 clearfix"  style="width:<?php echo $config['module_width'];?>px;height:<?php echo $config['module_height'];?>px;" >
+	<ul class="theme1_accordion clearfix" id="theme1_accordion_<?php echo $divid;?>">
+		<?php 
+		foreach ($items as $item):
+		?>
+		<li class="clearfix">
+			<div class="theme1_cc_handle"  >
+				<div class="theme1_div_title" style="width:<?php echo $config['module_height'];?>px;" >
+					<table class="theme1_tbl_title" >
+						<tr class="theme1_tr_title">
+							<?php if ($config['item_image_disp']) { ?>
+							<td nowrap="nowrap" class="theme1_td_title">
+								<div >
+									<img class="theme1_img_title" src="<?php echo $item['thumb_small'];?>" style="width:<?php echo $config['item_image_width'];?>px;height:<?php echo $config['item_image_height'];?>px;" alt="" />
+								</div>
+							</td>
+							<?php } ?>
+							<td nowrap="nowrap" class="theme1_td_title">
+								<div class="theme1_description_title" <?php if (!empty($config['product_title_color'])) echo 'style="color:'.$config['product_title_color'].';"';?> >
+									<?php echo $item['sub_title'];?>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<?php if ($config['product_description_disp'] == 1 || $config['product_title_disp'] == 1) { ?>
+				<div class="theme1_div_description">
+					<div class="theme1_div_bg_description_content" >
+						<img src="<?php echo $this->getSkinUrl('smartaddons/coolaccordion/images/tooltip_theme1.png');?>" class="tooltip_theme1" alt="" />
+					</div>
+					<div class="theme1_div_description_content" <?php if (!empty($config['product_description_color'])) echo 'style="color:'.$config['product_description_color'].';"';?> >
+						<?php if ($config['product_title_disp']==1){?>
+						<div class="theme1_content_title">
+							<?php
+								if ($config['product_title_linkable']==1){	?>
+									<a href="<?php echo $item['link']?>" <?php echo $smarthelper->getTargetAttr($config['product_links_target']); ?>><?php echo $item['sub_title']?></a>
+							<?php	}
+								else
+									echo $item['sub_title'];
+							?>
+						</div>
+							<?php if ($config['product_price_disp'] == 1) { ?>
+							<div class="theme1_price">
+								<?php echo $item['price'];?>
+							</div>
+							<?php } ?>
+						<?php }?>
+						<div class="theme1_content">
+							<?php if ($config['product_description_disp']==1){
+										echo $item['sub_content'];
+										if ($config['product_details_page_link_disp']==1){?>
+										<a href="<?php echo $item['link']?>" <?php echo $smarthelper->getTargetAttr($config['product_links_target']); ?>><?php echo $config['product_details_page_link_text']?></a>
+									<?php }
+								 } ?>
+						</div>
+					</div>
+				</div>
+				<?php } ?>
+			</div>
+			<div class="theme1_div_content" <?php if (isset($config['product_image_background']) && !empty($config['product_image_background'])) echo 'style="background: '.$config['product_image_background'].';"';?>>
+				<?php if ($config['product_image_disp']) { ?>
+					<?php if ($config['product_image_linkable'] == 0){ ?>
+						<img class="theme1_img_background" src="<?php echo $item['thumb'];?>" alt="" />
+					<?php } else { ?>
+						<img class="theme1_img_background_with_link" src="<?php echo $item['thumb'];?>" <?php echo $smarthelper->getTargetAttr($config['product_links_target']); ?> alt="" />
+					<?php } ?>
+				<?php } ?>
+			</div>
+		</li>
+		<?php endforeach; ?>
+	</ul>
+</div>

@@ -1,0 +1,72 @@
+<?php
+/*------------------------------------------------------------------------
+# SM CoolAccordion - Version 1.0
+# Copyright (C) 2009-2011 YouTech Company. All Rights Reserved.
+# @license - Copyrighted Commercial Software
+# Author: YouTech Company
+# Websites: http://www.smartaddons.com
+-------------------------------------------------------------------------*/
+?>
+<div class="content_cool_theme2" id="content_cool_theme2_<?php echo $divid;?>" >
+		<ol>
+			<?php
+			foreach ($items as $item):
+			?>
+				<li class="clearfix">
+					<div  class="accTab" style="height:<?php echo $config['module_height']; ?>px;">
+						<div class="divTab" >
+							<div class="divTabInner" >
+								<div class="theme2_div_title" <?php if (!empty($config['product_title_color'])) echo 'style="color:'.$config['product_title_color'].'; width:'.$config['module_height'].'px;"'; else echo 'style="width:'.$config['module_height'].'px;"';?>  >
+									<?php echo $item['sub_title'];?>
+								</div>
+							</div>
+						</div>
+					</div>
+						<div  <?php if (isset($config['product_image_background']) && !empty($config['product_image_background'])) echo 'style="background: '.$config['product_image_background']. ';"'; ?>>
+							<div class="theme2_div_img_bg">
+							<?php if ($config['product_image_disp']) { ?>
+								<?php if ($config['product_image_linkable']==0){ ?>
+									<img class="theme2_img_background" src="<?php echo $item['thumb'];?>" alt="" />
+								<?php } else { ?>
+									<img class="theme2_img_background_with_link" src="<?php echo $item['thumb'];?>" <?php echo $smarthelper->getTargetAttr($config['product_links_target']); ?> alt="" />
+								<?php } ?>
+							<?php } ?>
+							</div>
+						
+						<?php if ($config['product_description_disp']==1 || $config['product_title_disp']==1) { ?>
+							<div class="divDescriptionBg" <?php if (isset($config['product_description_opacity']) && !empty($config['product_description_opacity'])) echo 'style="opacity: '.$config['product_description_opacity']. '; filter: alpha(opacity: '.($config['product_description_opacity']*100).');"'; ?> ></div>
+							<div class="divDescriptionContent" <?php if (!empty($config['product_description_color'])) echo 'style="color:'.$config['product_description_color'].';"';?> >
+								<?php if ($config['product_title_disp']==1){?>
+								<div class="divTitle">
+									<?php
+										if ($config['product_title_linkable']==1){	?>
+											<a href="<?php echo $item['link']?>" <?php echo $smarthelper->getTargetAttr($config['product_links_target']); ?>><?php echo $item['sub_title']?></a>
+									<?php	}
+										else
+											echo $item['sub_title'];
+									?>
+								</div>
+								<?php } ?>
+								<?php if ($config['product_price_disp'] == 1) { ?>
+								<div class="theme2_price">
+									<?php echo $item['price'];?>
+								</div>
+								<?php } ?>
+								<div class="divInfoText">
+									<?php if ($config['product_description_disp']==1){
+												echo $item['sub_content'];
+												if ($config['product_details_page_link_disp']==1){?>
+												<a href="<?php echo $item['link']?>" <?php echo $smarthelper->getTargetAttr($config['product_links_target']); ?>>
+													<img class="img_readmore_theme2" src="<?php echo $this->getSkinUrl('smartaddons/coolaccordion/images/read-more-theme2.png');?>" alt="" />
+													<img class="img_readmore_hover_theme2" src="<?php echo $this->getSkinUrl('smartaddons/coolaccordion/images/read-more-hover-theme2.png');?>" alt="" />												
+												</a>
+											<?php }
+										 } ?>								
+								</div>
+							</div>
+						<?php } ?>
+						</div>
+				</li>
+			<?php endforeach; ?>
+		</ol>
+</div>
