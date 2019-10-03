@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/smartaddons_coolaccordion",
+    "name": "OpenMageModuleFostering\/smartaddons_coolaccordion",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "A must have extension of Magento",
     "authors": [
-    {
-        "name": "SmartAddons",
-        "email": "marketing@ytcvn.com"
-    }
-],
+        {
+            "name": "SmartAddons",
+            "email": "marketing@ytcvn.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
